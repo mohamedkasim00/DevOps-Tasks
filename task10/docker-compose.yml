@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    environment:
+      - SPRING_PROFILES_ACTIVE=mysql
+    networks:
+      - petclinic-network
+
+networks:
+  petclinic-network:
+    driver: bridge
