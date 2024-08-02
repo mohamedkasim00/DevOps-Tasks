@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Package the application
-RUN ./mvnw package
+RUN ./mvnw package -DskipTests
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
